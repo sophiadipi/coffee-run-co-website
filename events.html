@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    COMP 2681 
+    Final Project: Coffee Run Co. Website 
+    Sophia DiPietro (T00714296)
+    2025-05-14
+    
+    Filename: events.html
+    
+    This file contains the content that will be displayed on the events page of the Coffee Run Co. Website. 
+-->
+
+<head>
+    <!--Meta tags for character encoding and controlling viewport-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>Events &ndash; Coffee Run Co.</title>
+
+    <!--Stylesheets-->
+    <link href="base.css" rel="stylesheet">
+    <link href="events.css" rel="stylesheet">
+
+    <!-- Font Awesome stylesheet for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!--JavaScript for loading upcoming events and countdown timer onto page-->
+    <script src="upcomingEvents.js" defer></script>
+</head>
+
+<body>
+    <!------------------------------------HEADER--------------------------------------------->
+    <header>
+        <div class="logo">
+            <!--Logo links to home page-->
+            <a href="index.html"><img src="Images/coffeeRunCoLogo.png" alt=""></a>
+        </div>
+
+        <!--NAVIGATION MENU-->
+         <nav class="navBar">
+            <!--Nav icon for responsive dropdown navigation menu-->
+            <a id="navIcon" href="#"><img src="Images/navIcon.png" alt=""></a>
+            <ul id="navMenu">
+                <li id="aboutButton"><a href="about.html">our purpose</a></li>
+                <li id="eventsButton"><a href="events.html" class="active">events</a></li>
+                <li id="shopButton"><a href="shop.html">merch</a></li>
+                <li id="contactButton"><a href="join.html">join us</a></li>
+                <li><a href="crossReference.html"><i class="fa-solid fa-file-lines"></i></a></li>
+            </ul>
+         </nav>
+    </header>
+
+    <!------------------------------------MAIN CONTENT--------------------------------------------->
+    <main class="animate">
+        <div id="eventsMain">
+            
+            <!--INTRO SECTION-->
+            <div id="eventsIntro">  
+                <div id="eventHeading">
+                    <h2>let's get together</h2>
+                    <p>There's more to Coffee Run Co. than just great coffee. From weekly run clubs to live DJs, art shows, 
+                        and laid-back weekend hangouts, we're always finding new ways to bring our community together. Check 
+                        out what's coming up and make some time to stop by. We'd love to see you there.</p>
+                </div>  
+
+                <!--Prompt to join mailing list-->
+                <div id="eventsJoinDiv">
+                    <img src="Images/laceUp.png" alt="">
+                    <p>Like what you see? <a href="join.html">Sign up</a> now to stay in the loop about our upcoming events.</p>
+                </div>
+            </div>
+
+            <!--UPCOMING EVENTS SECTION wITH CONTENT LOADED FROM upcomingEvents.js-->
+            <div id="eventsDiv">
+
+                <!--Countdown clock displaying the time left until the next event starts-->
+                <div class="event" id="countdown">
+                    <h2><i class="fa-regular fa-clock"></i>&nbsp;&nbsp;next event:</h2>
+                    <!--Countdown clock loaded from upcomingEvents.js-->
+                    <div id="countdownTimer"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!------------------------------------FOOTER--------------------------------------------->
+    <footer>
+        <!--Hyperlinks for email and social media pages-->
+        <div class="footerLinks">
+            <a href="mailto:info@coffeerunco.ca">
+                <i class="far fa-envelope" id="emailIcon"></i>
+                <span class="socialLinks">info@coffeerunco.ca</span>
+            </a> 
+            <span class="socialLinks">|</span>  
+            <a href="https://www.instagram.com/coffeerunco.ca/?hl=en" target="_blank">
+                <i class="fab fa-instagram" id="instaIcon"></i>
+                <span class="socialLinks">coffeerunco.hamilton</span>
+            </a>
+            <span class="socialLinks">|</span>
+            <a href="https://www.facebook.com/p/Coffee-Run-Co-61566298375233/" target="_blank">
+                <i class="fab fa-facebook" id="fbIcon"></i>
+                <span class="socialLinks">Coffee Run Co.</span>
+            </a>
+        </div>
+        <p>&copy; 2025 CoffeeRunCo.</p>
+    </footer>
+</body>
+</html>

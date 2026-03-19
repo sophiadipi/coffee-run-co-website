@@ -1,0 +1,359 @@
+@charset "utf-8";
+
+/*
+    COMP 2681
+    Final Project: Coffee Run Co. Website
+    Sophia DiPietro (T00714296)
+    2025-05-14
+
+    Filename: base.css
+
+    This file contains the styles for elements common to all pages of the website (i.e., header and footer), 
+    including media queries for mobile and tablet styles. 
+*/
+
+@font-face {
+    font-family: 'Baron Neue'; src: url('Fonts/BaronNeue.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Serif'; src: url('Fonts/NotoSerif.ttf') format('truetype');
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    min-width: 320px;
+}
+
+body {
+    background: rgb(234, 227, 220);
+}
+
+/* HEADER STYLES */
+header {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 120px;
+    box-sizing: border-box;
+    background: rgb(234, 227, 220);
+    top: 0;
+    position: sticky;
+    padding: 15px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    z-index: 10;
+}
+
+.logo img {
+    width: 410px;
+    height: auto;
+}
+
+nav {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+#navIcon {
+    display: none;
+}
+
+#navMenu li {
+    display: inline;
+    margin: 3.5vw;
+}
+
+nav ul {
+    list-style: none;
+    font-family: 'Baron Neue', Impact, sans-serif;
+    margin: 4vw;
+    font-size: 25px;
+}
+
+#navMenu a {
+    color: rgb(46, 46, 46);
+    text-decoration: none;
+}
+
+#navMenu a:hover {
+    color: rgb(252, 78, 3);
+}
+
+#navMenu a.active {
+    color: rgb(252, 78, 3);
+}
+
+/* BODY STYLES */
+body, html {
+    min-height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+}
+
+/* FOOTER STYLES */
+footer {
+    text-align: center;
+    font-family: 'Noto Serif', Georgia, serif;
+    color: rgb(234, 227, 220);
+    line-height: 2.5;
+    margin: 0;
+    padding-top: 35px;
+    padding-bottom: 20px;
+    font-size: 20px;
+    background-color: rgb(46, 46, 46);
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.4);
+}
+
+footer a {
+    color: rgb(234, 227, 220);
+    text-decoration: none;
+}
+
+.footerLinks {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-bottom: 15px;
+}
+
+.footerLinks a:hover {
+    color: rgb(252, 78, 3);
+}
+
+#emailIcon, #instaIcon, #fbIcon {
+    font-size: 26px;
+}
+
+#lastUpdated {
+    font-size: 0.7em;
+    line-height: 2.5;
+    margin-top: 0;
+}
+
+/* HYPERLINK STYLES */
+#navMenu a, .footerLinks a {
+  transition: color 0.3s ease-in-out;
+}
+
+
+/* ANIMATIONS */
+main.animate {
+    animation: pageTransition 0.6s ease-out forwards;
+}
+
+@keyframes pageTransition {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+/* 
+===========================
+MOBILE STYLES
+===========================
+*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    /* HEADER STYLES */
+    header {
+        height: 85px;
+        padding: 0px;
+    }
+
+    .logo {
+        margin: auto;
+    }
+
+    .logo img {
+        width: 65vw;
+        height: auto;
+    }
+    
+
+    /* NAVIGATION STYLES */
+    nav {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #navIcon {
+        display: block;
+    }
+
+    .navBar img {
+        height: 25px;
+        width: auto;
+        margin-right: 10px;
+    }
+
+    #navMenu {
+        display: -webkit-flex;
+        display: flex;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(234, 227, 220);
+        position: absolute;
+        top: 85px;
+        left: 0;
+        border-bottom: 4px solid rgb(252, 78, 3);
+        margin: 0; 
+        box-sizing: border-box;
+    }
+
+    #navMenu li {
+        box-sizing: border-box;
+        text-align: center;
+        width: 100%;
+        padding: 15px;
+        margin: 0px;
+        border-top: 1px solid rgba(46, 46, 46, 0.6);
+        font-size: 20px;
+    }
+
+    #navIcon:hover + #navMenu, #navMenu:hover {
+        max-height: 500px;
+    }
+
+    /* FOOTER STYLES */
+    footer {
+        padding: 20px;
+    }
+
+    .socialLinks {
+        display: none;
+    }
+
+    .footerLinks a {
+        padding: 0 15px;
+    }
+}
+
+
+/* 
+===========================
+TABLET STYLES
+===========================
+*/
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+     /* HEADER STYLES */
+     header {
+        height: 100px;
+        padding: 0px;
+    }
+
+    .logo {
+        margin: auto;
+    }
+
+    .logo img {
+        height: 90px;
+        width: auto;
+    }
+    
+
+    /* NAVIGATION STYLES */
+    nav {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #navIcon {
+        display: block;
+    }
+
+    .navBar img {
+        height: 25px;
+        width: auto;
+        margin-right: 10px;
+    }
+
+    #navMenu {
+        display: -webkit-flex;
+        display: flex;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        width: 100vw;
+        background-color: rgb(234, 227, 220);
+        position: absolute;
+        top: 100px;
+        left: 0;
+        border-bottom: 4px solid rgba(252, 78, 3, 0.9);
+        margin: 0; 
+        box-sizing: border-box;
+    }
+
+    #navMenu li {
+        box-sizing: border-box;
+        text-align: center;
+        width: 100%;
+        padding: 15px;
+        margin: 0px;
+        border-top: 1px solid rgb(46, 46, 46);
+    }
+
+    #navIcon:hover + #navMenu, #navMenu:hover {
+        max-height: 500px;
+    }
+
+     /* FOOTER STYLES */
+     footer {
+        padding: 20px;
+    }
+
+    .socialLinks {
+        display: none;
+    }
+
+    .footerLinks a {
+        padding: 0 15px;
+    }
+}
+
+/* 
+===========================
+SMALL DESKTOP STYLES
+===========================
+*/
+@media only screen and (min-width: 1025px) and (max-width: 1425px) {
+    #navMenu li {
+        margin: 2.2vw;
+        font-size: 1.7vw;
+    }
+
+    .logo img {
+        width: 30vw;
+        height: auto;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    header {
+        border-bottom: 4px solid rgba(252, 78, 3, 0.9);
+    }
+}
+

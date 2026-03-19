@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    COMP 2681 
+    Final Project: Coffee Run Co. Website 
+    Sophia DiPietro (T00714296)
+    2025-05-14
+    
+    Filename: index.html
+    
+    This file contains the content that will be displayed on the home page of the Coffee Run Co. Website. 
+-->
+
+<head>
+    <!--Meta tags for character encoding and controlling viewport-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>Coffee Run Co.</title>
+
+    <!--Stylesheets-->
+    <link href="base.css" rel="stylesheet">
+    <link href="home.css" rel="stylesheet">
+
+    <!-- Font Awesome stylesheet for icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!------------------------------------HEADER--------------------------------------------->
+    <header>
+        <div class="logo">
+            <!--Logo links to home page-->
+            <a href="index.html"><img src="Images/coffeeRunCoLogo.png" alt=""></a>
+        </div>
+
+        <!--NAVIGATION MENU-->
+         <nav class="navBar">
+            <!--Nav icon for responsive dropdown navigation menu-->
+            <a id="navIcon" href="#"><img src="Images/navIcon.png" alt=""></a>
+            <ul id="navMenu">
+                <li id="aboutButton"><a href="about.html">our purpose</a></li>
+                <li id="eventsButton"><a href="events.html">events</a></li>
+                <li id="shopButton"><a href="shop.html">merch</a></li>
+                <li id="contactButton"><a href="join.html">join us</a></li>
+                <li><a href="crossReference.html"><i class="fa-solid fa-file-lines"></i></a></li>
+            </ul>
+         </nav>
+    </header>
+
+    <!------------------------------------MAIN CONTENT--------------------------------------------->
+    <main>
+        <!--HERO SECTION-->
+        <div class="heroImage" id="heroImage">
+            <div class="heroText">
+                <h1>
+                    <!--Animated catch phrase-->
+                    <span class="popWord">run.</span>
+                    <span class="popWord">roast.</span>
+                    <span class="popWord">repeat.</span>
+                </h1>
+                <p>Bringing Hamilton together, one cup at a time.</p>
+
+                <!--Button that directs user to the newsletter sign-up page-->
+                <a href="join.html"><button id="communityButton">join the community</button></a>
+            </div>
+        </div>
+
+        <!--INTRO SECTION-->
+        <div class="introContainer">
+            <div class="intro" id="intro">
+                <img src="Images/coffeeRunCoInterior.png" alt="Cafe Interior">
+                <div class="introText">
+                    <p>Coffee Run Co. is a gathering place for anyone looking to connect, create, and be part of something&mdash;or simply in search
+                        of a great cup of coffee. We're fueled by strong brews, stronger connections, and the momentum of a city that never stands still. 
+                        Every corner of our space is a product of Hamilton, from the locally roasted beans to the artwork on the walls.
+                    </p>
+                    <!--Links to about page-->
+                    <p><a href="about.html">Learn More</a></p>
+                </div>
+            </div>
+        </div>
+
+        <!--HIGHLIGHTS SECTION-->
+        <div class="highlights" id="highlights">
+
+            <!--Merchandise highlight box-->
+            <div class="highlightBox" id="merchHighlight">
+                <!--Links to merchandise page-->
+                <a href="shop.html"><h2>crc essentials</h2></a>
+                <a href="shop.html" title="Click to Shop"><img src="Images/merch.png" alt="Coffee Run Co. Merchandise" class="highlightImg"></a>
+                <p>From cozy caf&#233; mornings to city runs, our gear has got you covered. Browse the Coffee Run Co. collection now.</p>
+            </div>
+
+            <!--Customer testimonial highlight box-->
+            <div class="highlightBox" id="testimonial">
+                <div class="testimonialText">
+                    <p id="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </p>
+                    <blockquote>My favourite coffee spot in Hamilton. Quality coffee, good energy, and music that makes you want to stay all day.</blockquote>
+                    <p>&mdash; someone with great taste</p>
+                    
+                </div>
+            </div>
+            
+            <!--Events highlight box-->
+            <div class="highlightBox" id="eventHighlight">
+                <!--Links to events page-->
+                <a href="events.html"><h2>meet you there</h2></a>
+                <a href="events.html" title="Click to See Upcoming Events"><img src="Images/runClub.png" alt="" class="highlightImg"></a>
+                <p>Group runs, art shows, live DJs, and more&mdash;there's always something happening. See what's coming up.</p>
+            </div>
+        </div>
+
+        <!--MAP AND ADDRESS SECTION-->
+        <div class="mapContainer">
+            <div class="map">
+                <!--Embedded Google map showing cafe location-->
+                <iframe title="crcMap" id="mapFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2905.9559177794904!2d-79.87381758809109!3d43.252345678144046!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882c9b4d2650b3a5%3A0x23e7a5ddc2ade530!2sCoffee%20Run%20Co.!5e0!3m2!1sen!2sca!4v1744178128834!5m2!1sen!2sca" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+            <!--Address and business hours-->
+            <div class="textArea">
+                <div class="mapText">
+                    <h2>come sip with us</h2>
+                    <p>Coffee Run Co.</p>
+                    <p>148 James St S.</p>
+                    <p>Hamilton, ON L8P3A2</p>
+                </div>
+                <div class="mTextContainer">
+                    <div class="days">
+                        <p>Monday</p>
+                        <p>Tuesday</p>
+                        <p>Wednesday</p>
+                        <p>Thursday</p>
+                        <p>Friday</p>
+                        <p>Saturday</p>
+                        <p>Sunday</p>
+                    </div>
+                    <div class="hours">
+                        <p>8:00 a.m. - 4:00 p.m.</p>
+                        <p>8:00 a.m. - 4:00 p.m.</p>
+                        <p>8:00 a.m. - 4:00 p.m.</p>
+                        <p>8:00 a.m. - 8:00 p.m.</p>
+                        <p>8:00 a.m. - 8:00 p.m.</p>
+                        <p>8:00 a.m. - 8:00 p.m.</p>
+                        <p>8:00 a.m. - 4:00 p.m.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!------------------------------------FOOTER--------------------------------------------->
+    <footer id="homeFooter">
+        <!--Hyperlinks for email and social media pages-->
+        <div class="footerLinks">
+            <a href="mailto:info@coffeerunco.ca">
+                <i class="far fa-envelope" id="emailIcon"></i>
+                <span class="socialLinks">info@coffeerunco.ca</span>
+            </a> 
+            <span class="socialLinks">|</span>  
+            <a href="https://www.instagram.com/coffeerunco.ca/?hl=en" target="_blank">
+                <i class="fab fa-instagram" id="instaIcon"></i>
+                <span class="socialLinks">coffeerunco.hamilton</span>
+            </a>
+            <span class="socialLinks">|</span>
+            <a href="https://www.facebook.com/p/Coffee-Run-Co-61566298375233/" target="_blank">
+                <i class="fab fa-facebook" id="fbIcon"></i>
+                <span class="socialLinks">Coffee Run Co.</span>
+            </a>
+        </div>
+        <p>&copy; 2025 CoffeeRunCo.</p>
+        <p id="lastUpdated"></p>
+
+        <!--JavaScript to display when the site was last updated-->
+        <script>
+            document.getElementById("lastUpdated").innerHTML = "Updated " + document.lastModified;
+        </script>
+    </footer>
+</body>
+</html>

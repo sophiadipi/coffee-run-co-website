@@ -1,0 +1,265 @@
+@charset "utf-8";
+
+/*  COMP 2681
+    Final Project: Coffee Run Co. Website
+    Sophia DiPietro (T00714296)
+    2025-05-14
+
+    Filename: events.css
+
+    This file contains styles for the events page for desktop, tablet, and mobile devices
+*/
+
+@font-face {
+    font-family: 'Baron Neue'; src: url('Fonts/BaronNeue.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Serif'; src: url('Fonts/NotoSerif.ttf') format('truetype');
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+#eventsMain {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 80px 60px;
+    background: rgb(234, 227, 220);
+    font-family: 'Noto Serif', Georgia, serif;
+    color: rgb(46, 46, 46);
+    
+}
+
+#eventsDiv {
+    -webkit-flex: 1;
+    flex: 1;
+    min-width: 500px;
+    max-width: 1000px;
+
+}
+
+div#countdown {
+    background: transparent;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+div#countdown h2 {
+    font-family: 'Baron Neue', Impact, sans-serif;
+    font-size: 1.8rem;
+}
+
+#countdownTimer {
+    font-size: 1.8rem;
+    font-weight: bold;
+    font-family: 'Baron Neue', Impact, sans-serif;
+}
+
+
+.event {
+    background: rgb(215, 205, 193);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(46, 46, 46, 0.3);
+}
+
+.event p {
+    font-size: 1.3rem;
+    padding: 7.5px 0px;
+}
+
+.event h1 {
+    font-family: 'Baron Neue', Impact, sans-serif;
+    font-size: 1.5rem;
+    padding: 15px 0px;
+}
+
+.event i {
+    color: rgb(252, 78, 3);
+}
+
+#eventsIntro {
+    -webkit-flex: 2;
+    flex: 2;
+    min-width: 400px;
+    max-width: 480px;
+    padding: 20px 0;
+}
+
+#eventsIntro h2 {
+    font-size: 2.5rem;
+    font-family: 'Baron Neue', Impact, sans-serif;
+    padding: 0 0 20px 0;
+}
+
+#eventsIntro p {
+    font-size: 1.4rem;
+    padding: 20px 0;
+    line-height: 1.6;
+}
+
+#eventsJoinDiv p {
+    line-height: 1.3;
+}
+
+#eventsJoinDiv img {
+    display: block;
+    width: 100%;
+    height: auto;
+    min-width: 200px;
+    max-width: 450px;
+    border-radius: 10px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    opacity: 0.9;
+}
+
+#eventsJoinDiv a {
+    color: rgb(46, 46, 46);
+    transition: color 0.3s ease-in-out;
+}
+
+#eventsJoinDiv a:hover {
+    color: rgb(252, 78, 3);
+}
+
+/* 
+===========================
+MOBILE STYLES
+===========================
+*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    #eventsMain {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+        gap: 20px;
+        min-width: unset;
+    }
+    
+    #eventsDiv, #eventsIntro {
+        width: 100%;
+        min-width: unset;
+        max-width: 100%;
+        padding: 0;
+    }
+
+    #eventsIntro {
+        text-align: center;
+    }
+
+    #eventsIntro h2 {
+        font-size: 30px;
+        padding: 10px 0;
+    }
+
+    #eventsIntro p {
+        font-size: 16px;
+        padding: 10px 0;
+    }
+
+    #eventsIntro img {
+        max-width: 85%;
+        margin: 10px auto;
+        box-shadow: 0 6px 16px rgba(46, 46, 46, 0.3);
+    }
+
+    .event h1 {
+        font-size: 20px;
+    }
+
+    .event p {
+        font-size: 16px;
+        padding: 3px 0;
+    }
+
+    .event {
+        margin: 15px 0;
+        padding: 15px;
+    }
+}
+
+
+/* 
+===========================
+TABLET STYLES
+===========================
+*/
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    #eventsMain {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 10px;
+        gap: 20px;
+    }
+
+    #eventsIntro {
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 60px;
+        padding: 0 50px;
+    }
+    
+    #eventsIntro, #eventsDiv {
+        width: 100%;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #eventHeading, #eventsJoinDiv {
+        -webkit-flex: 1;
+        flex: 1;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #eventHeading {
+        max-width: 55%;
+    }
+
+    #eventHeading h2 {
+        font-size: 4.5vw;
+        padding: 10px 0;
+    }
+
+    #eventsJoinDiv {
+        max-width: 30%;
+        background: rgb(215, 205, 193);
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 6px 16px rgba(46, 46, 46, 0.3);
+    }
+
+    #eventsJoinDiv img {
+        margin: 0 auto;
+        max-width: 100%;
+        min-width: unset;
+    }
+
+}

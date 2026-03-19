@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    COMP 2681 
+    Final Project: Coffee Run Co. Website 
+    Sophia DiPietro (T00714296)
+    2025-05-14
+    
+    Filename: about.html
+    
+    This file contains the content that will be displayed on the about page of the Coffee Run Co. Website. 
+-->
+
+<head>
+    <!--Meta tags for character encoding and controlling viewport-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>Our Purpose &ndash; Coffee Run Co.</title>
+
+    <!--Stylesheets-->
+    <link href="base.css" rel="stylesheet">
+    <link href="about.css" rel="stylesheet">
+
+    <!-- Font Awesome stylesheet for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!------------------------------------HEADER--------------------------------------------->
+    <header>
+        <div class="logo">
+            <!--Logo links to home page-->
+            <a href="index.html"><img src="Images/coffeeRunCoLogo.png" alt=""></a>
+        </div>
+
+        <!--NAVIGATION MENU-->
+         <nav class="navBar">
+            <!--Nav icon for responsive dropdown navigation menu-->
+            <a id="navIcon" href="#"><img src="Images/navIcon.png" alt=""></a>
+            <ul id="navMenu">
+                <li id="aboutButton"><a href="about.html" class="active">our purpose</a></li>
+                <li id="eventsButton"><a href="events.html">events</a></li>
+                <li id="shopButton"><a href="shop.html">merch</a></li>
+                <li id="contactButton"><a href="join.html">join us</a></li>
+                <li><a href="crossReference.html"><i class="fa-solid fa-file-lines"></i></a></li>
+            </ul>
+         </nav>
+    </header>
+
+    <!------------------------------------MAIN CONTENT--------------------------------------------->
+    <main class="animate">
+        <div class="purposeContainer">
+            <div class="leapOfFaith">
+
+                <!--ORIGIN STORY SECTION-->
+                <div class="leapText">
+                    <h2>a leap of faith</h2>
+                    <p>Coffee Run Co. didn't start with a business plan, but with a desire to create something meaningful. 
+                        We knew we wanted to open a coffee shop, but we also wanted it to reflect our love for running, music,
+                        and community. That's when the vision for Coffee Run Co. really came to life. 
+                    </p>
+                    <p>With no guarantee of success, we poured everything into making Coffee Run Co. a reality. From late nights researching
+                        to early mornings comparing brews, every detail was shaped with intention. It wasn't easy, 
+                        but every step brought us closer to a space that felt warm, welcoming, and rooted in connection.
+                    </p>
+                    <p>Now, every time someone walks through the door, whether it's for a coffee, a run, or a day of music, we're reminded 
+                        why we took the leap. Every conversation, every connection, and every cup served makes it all worth it.
+                    </p>
+                </div>
+                <img src="Images/leapOfFaith.png" alt="">
+            </div>
+
+            <!--BUSINESS MISSION SECTION-->
+            <div class="leapOfFaith" id="crcVideo">
+                <video controls>
+                    <source src="Videos/comeHang.mp4" type="video/mp4">
+                    <p>To play this video clip, you browser needs to support HTML5.</p>
+                </video>
+                <div class="leapText">
+                    <h2>not your average coffee shop</h2>
+                    <p>Sure, we make a mean matcha latte. But what really makes Coffee Run Co. Special is what happens beyond the cup.
+                        From day one, our goal has been to create a space that brings people together. Some days, that looks like a group
+                        run through the city followed by free coffee and good conversation. Other days, it's a local art show or a DJ spinning vinyl 
+                        on a Saturday afternoon.
+                    </p>
+                    <p>We host these events because we believe in the power of community and connection&mdash;and because they're fun, of course.
+                        Our caf&#233; isn't just a place to grab a drink; whether you're chasing a finish line or looking to slow down, there's always
+                        room here. 
+                    </p>     
+                    <p>Want a sneak peek? Click play. See our upcoming events <a href="events.html">here</a>.</p>
+                </div>
+            </div>
+
+            <!--SUPPORT LOCAL SECTION-->
+            <div class="leapOfFaith">
+                <div class="leapText">
+                    <h2>local love</h2>
+                    <p>We're big believers in keeping it close to home, which is why everything we serve is locally sourced.
+                        Our beans are roasted right here in Hamilton, and our baked goods are made fresh by nearby
+                        bakeries. The art on our walls? All made by local artists. And yes, it's for sale!
+                    </p>
+                    <p>When you support Coffee Run Co., you're supporting a whole network of small businesses, artists,
+                        and people to put their heart into what they do&mdash;just like we do. We're proud to be part 
+                        of that ecosystem, and even prouder to support the people who bring our city to life.
+                    </p>     
+                </div>
+                <img src="Images/localLove.png" alt="">
+            </div>
+        </div>
+    </main>
+
+    <!------------------------------------FOOTER--------------------------------------------->
+    <footer>
+        <!--Hyperlinks for email and social media pages-->
+        <div class="footerLinks">
+            <a href="mailto:info@coffeerunco.ca">
+                <i class="far fa-envelope" id="emailIcon"></i>
+                <span class="socialLinks">info@coffeerunco.ca</span>
+            </a> 
+            <span class="socialLinks">|</span>  
+            <a href="https://www.instagram.com/coffeerunco.ca/?hl=en" target="_blank">
+                <i class="fab fa-instagram" id="instaIcon"></i>
+                <span class="socialLinks">coffeerunco.hamilton</span>
+            </a>
+            <span class="socialLinks">|</span>
+            <a href="https://www.facebook.com/p/Coffee-Run-Co-61566298375233/" target="_blank">
+                <i class="fab fa-facebook" id="fbIcon"></i>
+                <span class="socialLinks">Coffee Run Co.</span>
+            </a>
+        </div>
+        <p>&copy; 2025 CoffeeRunCo.</p>
+    </footer>
+</body>
+</html>

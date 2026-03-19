@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    COMP 2681 
+    Final Project: Coffee Run Co. Website 
+    Sophia DiPietro (T00714296)
+    2025-05-14
+    
+    Filename: join.html
+    
+    This file contains the newsletter sign-up form that will be displayed on the "Join Us" page of the website. 
+-->
+
+<head>
+    <!--Meta tags for character encoding and controlling viewport-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>Join Us &ndash; Coffee Run Co.</title>
+
+    <!--Stylesheets-->
+    <link href="base.css" rel="stylesheet">
+    <link href="join.css" rel="stylesheet">
+
+    <!-- Font Awesome stylesheet for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!--JavaScript for form submission-->
+    <script src="formSubmit.js" defer></script>
+</head>
+
+<body>
+    <!------------------------------------HEADER--------------------------------------------->
+    <header>
+        <div class="logo">
+            <!--Logo links to home page-->
+            <a href="index.html"><img src="Images/coffeeRunCoLogo.png" alt=""></a>
+        </div>
+
+        <!--NAVIGATION MENU-->
+         <nav class="navBar">
+            <!--Nav icon for responsive dropdown navigation menu-->
+            <a id="navIcon" href="#"><img src="Images/navIcon.png" alt=""></a>
+            <ul id="navMenu">
+                <li id="aboutButton"><a href="about.html">our purpose</a></li>
+                <li id="eventsButton"><a href="events.html">events</a></li>
+                <li id="shopButton"><a href="shop.html">merch</a></li>
+                <li id="contactButton"><a href="join.html" class="active">join us</a></li>
+                <li><a href="crossReference.html"><i class="fa-solid fa-file-lines"></i></a></li>
+            </ul>
+         </nav>
+    </header>
+
+    <!------------------------------------MAIN CONTENT--------------------------------------------->
+    <main class="animate">
+        <!--INTRO SECTION-->
+        <div id="joinIntro">
+            <h2>never miss a moment</h2>
+            <p>We're always on the move, and we want you with us. Sign up to get curated 
+                updates about your favourite happenings. Tell us what matters to you, and we'll send the good stuff.</p>
+        </div>
+
+        <!--NEWSLETTER SIGN UP FORM-->
+        <div id="formDiv">
+            <form id="joinForm" action="#" method="post" autocomplete="off">
+
+                <!--First and last name fields with input validation regex pattern to ensure name is at least 2 letters, less than 30 characters,
+                 and only letters/hyphens/apostrophes-->
+                <div class="formRow">
+                    <label for="firstName"><i class="fa fa-id-card" aria-hidden="true"></i>&nbsp;&nbsp;First Name*</label>
+                    <input name="fName" id="firstName" type="text" pattern="^[A-Za-z][A-Za-z\-']{1,29}$" required>
+                    <label for="lastName"><i class="fa fa-id-card" aria-hidden="true"></i>&nbsp;&nbsp;Last Name*</label>
+                    <input name="lName" id="lastName" type="text" pattern="^[A-Za-z][A-Za-z\-']{1,29}$" required>
+                </div>
+
+                <!--Email field with input validation regex pattern to ensure email is in the correct format-->
+                <div class="formRow">
+                    <label for="userEmail"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Email*</label>
+                    <input name="email" id="userEmail" type="text" required
+                    title="Enter a valid email address." 
+                    pattern="[\-a-zA-Z0-9~!$%^&amp;*_=+\}\{'?]+(\.[\-a-zA-Z0-9~!$%^&amp;*_=+\}\{'?]+)*@[a-zA-Z0-9_][\-a-zA-Z0-9_]*(\.[\-a-zA-Z0-9_]+)*\.[a-zA-Z]{2,}$">
+                </div>
+
+                <!--Update type checkboxes for user preferences-->
+                <fieldset class="eventCheckboxes">
+                    <legend><i class="fa-solid fa-bell"></i>&nbsp;&nbsp;What kind of updates do you want?</legend>
+                    <div class="checkboxGrid">
+                        <!--All checkboxes are checked by default-->
+                        <label><input type="checkbox" name="runClub" checked> Run Club</label>
+                        <label><input type="checkbox" name="artEvents" checked> Art Events</label>
+                        <label><input type="checkbox" name="musicEvents" checked> Music Events</label>
+                        <label><input type="checkbox" name="newProducts" checked> New Products</label>
+                    </div>
+                </fieldset>
+                
+                <!--Optional comment box-->
+                <div class="additionalInfo">
+                    <label for="commBox"><i class="fa-solid fa-comment"></i>&nbsp;&nbsp;Comments</label>
+                    <textarea name="commentBox" id="commBox" placeholder="Have a question, idea, or just want to say hi? We're all ears."></textarea>
+                </div>
+                
+                <!--Consent checkbox for email permission-->
+                <div id="consent">
+                    <input name="consent" id="consentCheckbox" type="checkbox" required>
+                    <label for="consentCheckbox">I agree to receive emails from Coffee Run Co. We'll never spam you. Pinky promise.&nbsp;<i id="rotate" class="far fa-smile"></i></label>
+                </div>
+
+                <!--Submit button-->
+                <div id="subButton">
+                    <input class="buttons" type="submit" value="join the crc crew">
+                </div> 
+            </form>
+        </div>
+    </main>
+    
+    <!------------------------------------FOOTER--------------------------------------------->
+    <footer>
+        <!--Hyperlinks for email and social media pages-->
+        <div class="footerLinks">
+            <a href="mailto:info@coffeerunco.ca">
+                <i class="far fa-envelope" id="emailIcon"></i>
+                <span class="socialLinks">info@coffeerunco.ca</span>
+            </a> 
+            <span class="socialLinks">|</span>  
+            <a href="https://www.instagram.com/coffeerunco.ca/?hl=en" target="_blank">
+                <i class="fab fa-instagram" id="instaIcon"></i>
+                <span class="socialLinks">coffeerunco.hamilton</span>
+            </a>
+            <span class="socialLinks">|</span>
+            <a href="https://www.facebook.com/p/Coffee-Run-Co-61566298375233/" target="_blank">
+                <i class="fab fa-facebook" id="fbIcon"></i>
+                <span class="socialLinks">Coffee Run Co.</span>
+            </a>
+        </div>
+        <p>&copy; 2025 CoffeeRunCo.</p>
+    </footer>
+</body>
+</html>

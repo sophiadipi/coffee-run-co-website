@@ -1,0 +1,70 @@
+@charset "utf-8";
+
+/*  COMP 2681
+    Final Project: Coffee Run Co. Website
+    Sophia DiPietro (T00714296)
+    2025-05-14
+
+    Filename: evaluationForm.css
+
+    This file contains styles for the website evaluation form. 
+*/
+
+@font-face {
+    font-family: 'Baron Neue'; src: url('Fonts/BaronNeue.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Serif'; src: url('Fonts/NotoSerif.ttf') format('truetype');
+}
+
+#formDiv {
+    font-size: 1.5rem;
+    font-family: 'Baron Neue', Impact, sans-serif;
+
+}
+
+.starRating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+    gap: 15px;
+    border: none;
+    font-size: 1.3rem;
+    font-family: 'Baron Neue', Impact, sans-serif;
+    margin: 20px 0 5px 0;
+  }
+  
+  .starRating input {
+    display: none;
+  }
+  
+  .starRating label {
+    font-size: 2.2rem;
+    color: white;
+    cursor: pointer;
+    transition: color 0.2s;
+    margin: 5px 0;
+  }
+  
+  .starRating input:checked ~ label {
+    color: #fc4e03;
+  }
+  
+  .starRating label:hover,
+  .starRating label:hover ~ label {
+    color: #fc4e03;
+  }
+
+  #last {
+    margin-bottom: 40px;
+  }
+
+  .additionalInfo label {
+    margin-top: 20px;
+  }
+
+  #subButton {
+    margin-top: 40px;
+  }
+

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    COMP 2681 
+    Final Project: Coffee Run Co. Website 
+    Sophia DiPietro (T00714296)
+    2025-05-14
+    
+    Filename: shop.html
+    
+    This file contains the content that will be displayed on the "Merch" page of the Coffee Run Co. Website. 
+-->
+
+<head>
+    <!--Meta tags for character encoding and controlling viewport-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>Merch &ndash; Coffee Run Co.</title>
+
+    <!--Stylesheets-->
+    <link href="base.css" rel="stylesheet">
+    <link href="shop.css" rel="stylesheet">
+
+    <!-- Font Awesome stylesheet for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!--JavaScript for loading merchandise content-->
+    <script src="merch.js" defer></script>
+</head>
+
+<body>
+    <!------------------------------------HEADER--------------------------------------------->
+    <header>
+        <div class="logo">
+            <!--Logo links to home page-->
+            <a href="index.html"><img src="Images/coffeeRunCoLogo.png" alt=""></a>
+        </div>
+
+        <!--NAVIGATION MENU-->
+         <nav class="navBar">
+            <!--Nav icon for responsive dropdown navigation menu-->
+            <a id="navIcon" href="#"><img src="Images/navIcon.png" alt=""></a>
+            <ul id="navMenu">
+                <li id="aboutButton"><a href="about.html">our purpose</a></li>
+                <li id="eventsButton"><a href="events.html">events</a></li>
+                <li id="shopButton"><a href="shop.html" class="active">merch</a></li>
+                <li id="contactButton"><a href="join.html">join us</a></li>
+                <li><a href="crossReference.html"><i class="fa-solid fa-file-lines"></i></a></li>
+            </ul>
+         </nav>
+    </header>
+
+    <!------------------------------------MAIN CONTENT--------------------------------------------->
+    <main class="animate">
+        <div id="merchMain">
+            <!--INTRO SECTION-->
+            <div id="merchIntro">
+                <h1>stop by & grab yours</h1>
+                <p>Designed for movement, comfort, and everyday life, our merch is made to go wherever you do. 
+                    Whether you're heading out for a run or cozying up with a coffee, we've got something for you. Available in store only.</p>
+            </div>
+
+            <!--MERCHANDISE SECTION - items loaded from merch.js-->
+            <div id="merchDiv"></div>
+        </div>
+    </main>
+
+    <!------------------------------------FOOTER--------------------------------------------->
+    <footer>
+        <!--Hyperlinks for email and social media pages-->
+        <div class="footerLinks">
+            <a href="mailto:info@coffeerunco.ca">
+                <i class="far fa-envelope" id="emailIcon"></i>
+                <span class="socialLinks">info@coffeerunco.ca</span>
+            </a> 
+            <span class="socialLinks">|</span>  
+            <a href="https://www.instagram.com/coffeerunco.ca/?hl=en" target="_blank">
+                <i class="fab fa-instagram" id="instaIcon"></i>
+                <span class="socialLinks">coffeerunco.hamilton</span>
+            </a>
+            <span class="socialLinks">|</span>
+            <a href="https://www.facebook.com/p/Coffee-Run-Co-61566298375233/" target="_blank">
+                <i class="fab fa-facebook" id="fbIcon"></i>
+                <span class="socialLinks">Coffee Run Co.</span>
+            </a>
+        </div>
+        <p>&copy; 2025 CoffeeRunCo.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    COMP 2681 
+    Final Project: Coffee Run Co. Website 
+    Sophia DiPietro (T00714296)
+    2025-05-14
+    
+    Filename: crossReference.html
+    
+    This file contains the content for the cross reference page, which links to all project requirements. 
+-->
+
+<head>
+    <!--Meta tags for character encoding and controlling viewport-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>Cross-Reference Page</title>
+
+    <!--Stylesheets-->
+    <link href="base.css" rel="stylesheet">
+    <link href="crossReference.css" rel="stylesheet">
+
+    <!-- Font Awesome stylesheet for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+    <!------------------------------------HEADER--------------------------------------------->
+    <header>
+        <div class="logo">
+            <!--Logo links to home page-->
+            <a href="index.html"><img src="Images/coffeeRunCoLogo.png" alt=""></a>
+        </div>
+
+        <!--NAVIGATION MENU-->
+         <nav class="navBar">
+            <!--Nav icon for responsive dropdown navigation menu-->
+            <a id="navIcon" href="#"><img src="Images/navIcon.png" alt=""></a>
+            <ul id="navMenu">
+                <li id="aboutButton"><a href="about.html">our purpose</a></li>
+                <li id="eventsButton"><a href="events.html">events</a></li>
+                <li id="shopButton"><a href="shop.html">merch</a></li>
+                <li id="contactButton"><a href="join.html">join us</a></li>
+                <li><a href="crossReference.html" class="active"><i class="fa-solid fa-file-lines"></i></a></li>
+            </ul>
+         </nav>
+    </header>
+
+    <!------------------------------------MAIN CONTENT--------------------------------------------->
+    <main class="animate">
+        <h1>cross-reference page</h1>
+        
+        <div class="reference">
+            <h2>nine websites:</h2>
+            <h3>similar business sites:</h3>
+            <ul>
+                <li>
+                    <a href="https://detourcoffee.com/" target="_blank">Detour Coffee</a>
+                    <span> &#8594; I like the fun design and strong branding. The owner of Coffee Run Co. specifically referenced this site as a source of inspiration.</span>
+                </li>
+                <li>
+                    <a href="https://www.unofficialrunclub.com/" target="_blank">Unofficial Run Club</a>
+                    <span> &#8594; This website stood out for its clean look and community feel, which are both qualities I aimed to achieve for Coffee Run Co.</span>
+                </li>
+                <li>
+                    <a href="https://watchhouse.com/?srsltid=AfmBOoqVfe0w3blw74XJuWFBEQcz2DpIXjlTgtR36p8w1dHspASi-q5Y" target="_blank">WatchHouse Coffee</a>
+                    <span> &#8594; The visually appealing homepage with animations and a dynamic hero section create a good first impression and enjoyable user experience.</span>
+                </li>
+            </ul>
+
+            <h3>downloadable websites:</h3>
+            <ul>
+                <li>
+                    <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+                    <span> &#8594; I used this website to include icons throughout the site.</span>
+                </li>
+                <li>
+                    <a href="https://freetouse.com/music/category/house/" target="_blank">Free to Use</a>
+                    <span> &#8594; This website provides free download of audio clips, which I used to create the video on the about page of the webiste.</span>
+                </li>
+                <li>
+                    <a href="https://www.1001fonts.com/" target="_blank">1001 Fonts</a>
+                    <span> &#8594; I used this website to download fonts for use on the website.</span>
+                </li>
+            </ul>
+
+            <h3>technical information:</h3>
+            <ul>
+                <li>
+                    <a href="https://developers.google.com/maps/documentation/embed/get-started">Google Maps Platform</a>
+                    <span> &#8594; I used this website to learn how to embed a map.</span>
+                </li>
+                <li>
+                    <a href="https://www.w3schools.com/howto/howto_css_hero_image.asp/">W3 Schools</a>
+                    <span> &#8594; This website provided a tutorial on creating a hero section.</span>
+                </li>
+                <li>
+                    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-columns">mdn web docs</a>
+                    <span> &#8594; This website provided a comprehensive tutorial on CSS grids, which helped me when creating the merchandise page.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="reference">
+            <h2>minimum requirement features:</h2>
+
+            <h3>html5:</h3>
+            <ul>
+                <li>
+                    <span>Appropriate HTML5 tags &#8594; see source code.</span> 
+                </li>
+                <li>
+                    <span>Inline images; both static and clickable &#8594; clickable images in the <a href="index.html#highlights" target="_blank">highlight boxes</a>
+                    on the home page and static images on the <a href="about.html" target="_blank">about</a>, <a href="events.html" target="_blank">events</a>, and 
+                    <a href="shop.html#merchDiv" target="_blank">merchandise</a> pages.
+                    </span>
+                </li>
+                <li>
+                    <span>Use of appropriate special characters &#8594; copyright symbol (&copy;) in <a href="crossReference.html#crFooter">footer</a> and other
+                    special characters used throughout the website.</span>
+                </li>
+                <li>
+                    <span>Use of appropriate &lt;meta&gt; tags &#8594; see source code. &lt;meta&gt; tags used in each html document to 
+                    specify character set and to control the viewport width and initial scale.</span>
+                </li>
+                <li>
+                    <span>A footer on the home page indicating when the website was last updated or modified &#8594; see <a href="index.html#homeFooter" target="_blank">home page footer</a>.</span>
+                </li>
+            </ul>
+            
+            <h3>css3:</h3>
+            <ul>
+                <li>
+                    <span>Use CSS3 to format the appearance of paragraphs, lists, headers, background images, tables, and forms &#8594; see stylesheets.</span>
+                </li>
+                <li>
+                    <span>Use CSS3 contextual selectors and at least two attribute selectors, excluding class and id attribute selectors &#8594; see stylesheets.</span>
+                </li>
+                <li>
+                    <span>Use CSS3 styles for colour (RGBA & HSLA) &#8594; see stylesheets. RGB(A) colour values used throughout.</span>
+                </li>
+                <li>
+                    <span>Use dynamic pseudo-classes to highlight hyperlinks states of link (visited, active, and hover), focus, and two structural pseudo-classes (first-of-type and last-of-type)
+                        &#8594; see stylesheets. 
+                    </span>
+                </li>
+                <li>
+                    <span>Use CSS3 background styles &#8594; used for the <a href="index.html#heroImage" target="_blank">hero image</a> on the home page.See <a href="home.css" target="_blank">home.css</a>.</span>
+                </li>
+                <li>
+                    <span>Your home page should have a drop cap created with CSS3 &#8594; see the <a href="index.html#intro" target="_blank">introductory paragraph</a> on the home page.</span>
+                </li>
+                <li>
+                    <span>Define document content with the class and id properties, and create styles for them &#8594; see html documents and corresponding stylesheets.</span>
+                </li>
+                <li>
+                    <span>Use CSS3 text and box shadows &#8594; examples throughout site.</span>
+                </li>
+                <li>
+                    <span>Use CSS3 transform rotate feature &#8594; see <a href="join.html#consent" target="_blank">web form</a>.</span>
+                </li>
+                <li>
+                    <span>Use CSS3 opacity applied to two images to appear semi-transparent &#8594; see <a href="about.css" target="_blank">about.css</a> and <a href="events.css" target="_blank">events.css</a></span>
+                </li>
+            </ul>
+
+            <h3>web form:</h3>
+            <ul>
+                <li>
+                    <span>Use appropriate form elements including some of the new HTML5 form elements &#8594; see the <a href="join.html" target="_blank">web form</a> and the 
+                    join.html source code file.</span>
+                </li>
+                <li>
+                    <span>Apply appropriate styles to web forms &#8594; see the <a href="join.html" target="_blank">web form</a> and <a href="join.css" target="_blank">join.css</a></span>
+                </li>
+                <li>
+                    <span>Apply inline form validation by using the focus pseudo-class to appropriate form elements &#8594; see <a href="join.css" target="_blank">join.css</a></span>
+                </li>
+            </ul>
+
+            <h3>multimedia:</h3>
+            <ul>
+                <li>
+                    <span>Use sound and video somewhere on your website &#8594; see the <a href="about.html#crcVideo" target="_blank">video</a>
+                    on the about page.</span>
+                </li>
+                <li>
+                    <span>Use transitions and animations &#8594; animation example in <a href="index.html#hero" target="_blank">hero section</a> of the home page. See <a href="home.css" target="_blank">home.css</a>.
+                        Transitions were used for hover styles for most of the hyperlinks on the website to create a gradual colour changing effect rather than a harsh and abrupt change. Hover over any hyperlink
+                        on this page for a demonstration. See <a href="base.css" target="_blank">base.css</a>.
+                    </span>
+                </li>
+            </ul>
+
+            <h3>javascript:</h3>
+            <ul>
+                <li>
+                    <span>Use variables; arithmetic, comparison and logical operators; subroutines; functions; arrays; conditional statements; conditional operators; and running time commands with system clock
+                        &#8594; see JavaScript files (<a href="upcomingEvents.js" target="_blank">upcomingEvents.js</a>, <a href="merch.js" target="_blank">merch.js</a>, and 
+                        <a href="formSubmit.js" target="_blank">formSubmit.js</a>).
+                    </span>
+                </li>
+                <li>
+                    <span>Use system date on your website &#8594; I used system date to create the <a href="events.html#countdown" target="_blank">event countdown timer</a>. 
+                    See <a href="upcomingEvents.js" target="_blank">upcomingEvents.js</a>.</span>
+                </li>
+                <li>
+                    <span>Validate form input by using appropriate JavaScript functions &#8594; see <a href="formSubmit.js" target="_blank">formSubmit.js</a></span>
+                </li>
+                <li>
+                    <span>Use JavaScript alerts for validation purposes &#8594; see <a href="formSubmit.js" target="_blank">formSubmit.js</a></span>
+                </li>
+            </ul>
+
+            <h3>responsive design:</h3>
+            <ul>
+                <li>
+                    <span>Your website design should include responsive design implementation using concepts covered in this course that would accommodate desktop, tablet, 
+                        and mobile designs, including positioning, grid, and flex layouts &#8594; see stylesheets. Media queries were used to make each page responsive.</span>
+                </li>
+                <li>
+                    <span>The use of contextual selectors to control sub-level menus is required, including a navicon image for mobile design &#8594; see the &lt;header&gt; section 
+                        of any of the html documents and <a href="base.css" target="_blank">base.css</a>.
+                    </span>
+                </li>
+                <li>
+                    <span>Images should also be responsive for different screen sizes and devices &#8594; see stylesheets.</span>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="reference">
+            <h2>documentation:</h2>
+
+            <h3>web project documentation:</h3>
+            <ul>
+                <li>
+                    <a href="Documents/webDocumentation.pdf" target="_blank">Coffee Run Co. Site Web Documentation (PDF)</a>
+                </li>
+            </ul>
+
+            <h3>flow of web pages:</h3>
+            <ul>
+                <li>
+                    <a href="Documents/pageFlow.pdf" target="_blank">Coffee Run Co. Webpage Flow (PDF)</a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="reference">
+            <h2>demonstration evaluation form:</h2>
+            <ul>
+                <li>
+                    <a href="evaluationForm.html" target="_blank">Coffee Run Co. Website Evaluation Form</a>
+                </li>
+            </ul>
+        </div>
+        
+    </main>
+
+    <!------------------------------------FOOTER--------------------------------------------->
+    <footer id="crFooter">
+        <!--Hyperlinks for email and social media pages-->
+        <div class="footerLinks">
+            <a href="mailto:info@coffeerunco.ca">
+                <i class="far fa-envelope" id="emailIcon"></i>
+                <span class="socialLinks">info@coffeerunco.ca</span>
+            </a> 
+            <span class="socialLinks">|</span>  
+            <a href="https://www.instagram.com/coffeerunco.ca/?hl=en" target="_blank">
+                <i class="fab fa-instagram" id="instaIcon"></i>
+                <span class="socialLinks">coffeerunco.hamilton</span>
+            </a>
+            <span class="socialLinks">|</span>
+            <a href="https://www.facebook.com/p/Coffee-Run-Co-61566298375233/" target="_blank">
+                <i class="fab fa-facebook" id="fbIcon"></i>
+                <span class="socialLinks">Coffee Run Co.</span>
+            </a>
+        </div>
+        <p>&copy; 2025 CoffeeRunCo.</p>
+    </footer>
+</body>
+</html>

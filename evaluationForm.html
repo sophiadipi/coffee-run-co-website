@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+    COMP 2681 
+    Final Project: Coffee Run Co. Website 
+    Sophia DiPietro (T00714296)
+    2025-05-14
+    
+    Filename: evaluationForm.html
+    
+    This file contains the evaluation form that the owner of Coffee Run Co. would complete to provide feedback on the website design. 
+-->
+
+<head>
+    <!--Meta tags for character encoding and controlling viewport-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <title>Evaluation Form</title>
+
+    <!--Stylesheets-->
+    <link href="base.css" rel="stylesheet">
+    <link href="join.css" rel="stylesheet">
+    <link href="evaluationForm.css" rel="stylesheet">
+
+    <!-- Font Awesome stylesheet for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!--JavaScript for form submission-->
+    <script src="formSubmit.js" defer></script>
+</head>
+
+<body>
+    <!------------------------------------MAIN CONTENT--------------------------------------------->
+    <main class="animate">
+        <div id="formDiv">
+            <!--EVALUATION FORM-->
+            <form id="joinForm" action="#" method="post" autocomplete="off">
+
+                <!--Legend for ratings-->
+                <legend>please rate the following (1 = poor, 5 = excellent):</legend>
+
+                <!--Visual design and branding star rating-->
+                <fieldset class="starRating">
+                    <legend><i class="fa-solid fa-eye"></i>&nbsp;&nbsp;visual design and branding:</legend>
+                    
+                    <!--Radio buttons for 1-5 star rating-->
+                    <input type="radio" id="design1" name="design" value="1" />
+                    <label for="design1"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="design2" name="design" value="2" />
+                    <label for="design2"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="design3" name="design" value="3" />
+                    <label for="design3"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="design4" name="design" value="4" />
+                    <label for="design4"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="design5" name="design" value="5" />
+                    <label for="design5"><i class="fas fa-star"></i></label>
+                </fieldset>
+
+                <!--User-friendliness star rating-->
+                <fieldset class="starRating">
+                    <legend><i class="fa-solid fa-user"></i>&nbsp;&nbsp;user-friendliness:</legend>
+                    
+                    <!--Radio buttons for 1-5 star rating-->
+                    <input type="radio" id="user1" name="userFriendliness" value="1" />
+                    <label for="user1"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="user2" name="userFriendliness" value="2" />
+                    <label for="user2"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="user3" name="userFriendliness" value="3" />
+                    <label for="user3"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="user4" name="userFriendliness" value="4" />
+                    <label for="user4"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="user5" name="userFriendliness" value="5" />
+                    <label for="user5"><i class="fas fa-star"></i></label>
+                </fieldset>
+
+                <!--Content relevance star rating-->
+                <fieldset class="starRating">
+                    <legend><i class="fas fa-file-alt"></i>&nbsp;&nbsp;content relevance:</legend>
+                    
+                    <!--Radio buttons for 1-5 star rating-->
+                    <input type="radio" id="relevance1" name="relevance" value="1" />
+                    <label for="relevance1"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="relevance2" name="relevance" value="2" />
+                    <label for="relevance2"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="relevance3" name="relevance" value="3" />
+                    <label for="relevance3"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="relevance4" name="relevance" value="4" />
+                    <label for="relevance4"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="relevance5" name="relevance" value="5" />
+                    <label for="relevance5"><i class="fas fa-star"></i></label>
+                </fieldset>
+
+                <!--Mobile design star rating-->
+                <fieldset class="starRating">
+                    <legend><i class="fa fa-mobile" aria-hidden="true"></i>&nbsp;&nbsp;mobile design:</legend>
+                    
+                    <!--Radio buttons for 1-5 star rating-->
+                    <input type="radio" id="mobile1" name="mobile" value="1" />
+                    <label for="mobile1"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="mobile2" name="mobile" value="2" />
+                    <label for="mobile2"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="mobile3" name="mobile" value="3" />
+                    <label for="mobile3"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="mobile4" name="mobile" value="4" />
+                    <label for="mobile4"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="mobile5" name="mobile" value="5" />
+                    <label for="mobile5"><i class="fas fa-star"></i></label>
+                </fieldset>
+
+                <!--Alignment with business goals star rating-->
+                <fieldset class="starRating">
+                    <legend><i class="fa-solid fa-briefcase"></i>&nbsp;&nbsp;alignment with business goals:</legend>
+                    
+                    <!--Radio buttons for 1-5 star rating-->
+                    <input type="radio" id="goals1" name="goals" value="1" />
+                    <label for="goals1"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="goals2" name="goals" value="2" />
+                    <label for="goals2"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="goals3" name="goals" value="3" />
+                    <label for="goals3"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="goals4" name="goals" value="4" />
+                    <label for="goals4"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="goals5" name="goals" value="5" />
+                    <label for="goals5"><i class="fas fa-star"></i></label>
+                </fieldset>
+
+                <!--Overall user experience star rating-->
+                <fieldset class="starRating" id="last">
+                    <legend><i class="fas fa-smile"></i>&nbsp;&nbsp;overall user experience:</legend>
+                    
+                    <!--Radio buttons for 1-5 star rating-->
+                    <input type="radio" id="experience1" name="experience" value="1" />
+                    <label for="experience1"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="experience2" name="experience" value="2" />
+                    <label for="experience2"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="experience3" name="experience" value="3" />
+                    <label for="experience3"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="experience4" name="experience" value="4" />
+                    <label for="experience4"><i class="fas fa-star"></i></label>
+                  
+                    <input type="radio" id="experience5" name="experience" value="5" />
+                    <label for="experience5"><i class="fas fa-star"></i></label>
+                </fieldset>
+
+                <!--Textarea box for favourite website feature-->
+                <div class="additionalInfo">
+                    <label for="favFeature"><i class="fa-solid fa-heart"></i></i>&nbsp;&nbsp;What did you like most about the website?</label>
+                    <textarea id="favFeature" name="favFeature" placeholder="Write your answer here..."></textarea>
+                </div>
+
+                <!--Textarea box for improvements/changes-->
+                <div class="additionalInfo">
+                    <label for="suggestions"><i class="fa-solid fa-wrench"></i>&nbsp;&nbsp;Is there anything you would improve or change?</label>
+                    <textarea id="suggestions" name="suggestions" placeholder="Write your answer here..."></textarea>
+                </div>
+                
+                <!--Textarea box for additional comments or suggestions-->
+                <div class="additionalInfo">
+                    <label for="commBox"><i class="fa-solid fa-comment"></i>&nbsp;&nbsp;Comments</label>
+                    <textarea name="commentBox" id="commBox" placeholder="Please enter any additional comments or suggestions you may have here."></textarea>
+                </div>
+
+                <!--Submit button-->
+                <div id="subButton">
+                    <input class="buttons" type="submit" value="submit">
+                </div> 
+            </form>
+        </div>
+        
+    </main>
+</body>
+</html>

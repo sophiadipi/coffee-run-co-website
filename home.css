@@ -1,0 +1,600 @@
+@charset "utf-8";
+
+/*  COMP 2681
+    Final Project: Coffee Run Co. Website
+    Sophia DiPietro (T00714296)
+    2025-05-14
+
+    Filename: home.css
+
+    This file contains styles for the home page for desktop, tablet, and mobile devices.
+*/
+
+@font-face {
+    font-family: 'Baron Neue'; src: url('Fonts/BaronNeue.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Serif'; src: url('Fonts/NotoSerif.ttf') format('truetype');
+}
+
+.heroImage {
+    background-image: url("Images/hero.png");
+    height: 95vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    display: -webkit-flex;
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+}
+
+.heroText {
+    text-align: center;
+    color: rgb(234, 227, 220);
+    font-size: 3.5vh;
+    font-family: 'Baron Neue', Impact, sans-serif;
+    z-index: 2;
+    padding: 30px;
+}
+
+.heroText h1 {
+    padding-bottom: 30px;
+    margin-bottom: 0;
+}
+
+.heroText p {
+    font-family: 'Noto Serif', Georgia, serif;
+    font-size: 2.8vh;
+    padding-top: 0;
+    margin-top: 0;
+    padding-bottom: 0px;
+    margin-bottom: 40px;
+    color: rgb(234, 227, 220);
+}
+
+.heroImage::before {
+    content: "";
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background: rgba(0, 0, 0, 0.25);
+    z-index: 1;
+}
+
+#communityButton {
+    background-color: rgba(46, 46, 46, 0.6);
+    border-radius: 10px;
+    color: rgb(234, 227, 220);
+    font-size: 18px;
+    font-family: 'Baron Neue', Impact, sans-serif;
+    padding: 15px 30px;
+    cursor: pointer;
+    border: 2px solid rgb(252, 78, 3);
+    transition: background-color 0.3s ease-in-out;
+}
+
+#communityButton:hover {
+    background: rgba(252, 78, 3, 0.3);
+}
+
+.introContainer {
+    background-color: rgb(234, 227, 220);
+    padding: 35px;
+}
+
+.intro {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    padding: 40px;
+    padding-top: 60px;
+    background-color: rgb(234, 227, 220);
+    border-radius: 10px;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.intro img {
+    width: 25%;
+    min-width: 350px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.introText {
+    -webkit-flex: 1;
+    flex: 1;
+    font-family: 'Noto Serif', Georgia, serif;
+    color: rgb(46, 46, 46);
+}
+
+.introText h2 {
+    font-family: 'Baron Neue', Impact, sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.introText p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    padding: 15px 0px;
+}
+
+.introText p:first-of-type::first-letter {
+    font-family: 'Baron Neue', Impact, sans-serif;
+    font-size: 3.5em;
+    margin-right: 5px;
+    float: left;
+    line-height: 0.6;
+}
+
+.introText p a {
+    color: rgb(46, 46, 46);
+    transition: color 0.3s ease-in-out;
+}
+
+.introText p a:hover {
+    color: rgb(227, 90, 11);
+}
+
+.testimonialText {
+    padding: 35px;
+    padding-top: 0;
+    margin: 0;
+    background: none;
+    font-family: 'Noto Serif', Georgia, serif;
+    font-size: 1.8rem;
+    color: rgb(46, 46, 46);
+    border-radius: 10px;
+    line-height: 2;
+    text-align: center;
+}
+
+#stars {
+    font-size: 1.5em;
+    padding-bottom: 40px;
+}
+
+#testimonial {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testimonialText blockquote::before {
+    content: '“'; 
+    font-size: 3rem;
+    padding-right: 15px;
+    line-height: 0;
+}
+
+.testimonialText blockquote::after {
+    content: '”'; 
+    font-size: 3rem; 
+    padding-left: 15px;
+    line-height: 0;
+}
+
+.testimonialText p {
+    padding-top: 25px;
+    font-size: 1.6rem;
+    line-height: 1.4;
+}
+
+.highlights {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 60px;
+    gap: 40px;
+    background-color: rgb(234, 227, 220);
+    font-family: 'Noto Serif', Georgia, serif;
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: rgb(46, 46, 46);
+}
+
+.highlights h2 {
+    font-family: 'Baron Neue', Impact, sans-serif;
+    font-size: 2.5rem;
+}
+
+.highlights a {
+    text-decoration: none;
+    color: rgb(46, 46, 46);
+}
+
+
+.highlightBox {
+    -webkit-flex: 1 1 400px;
+    flex: 1 1 400px;
+    display: -webkit-flex;
+    display: flex;
+    max-width: 600px;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    background: rgb(215, 205, 193);
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(46, 46, 46, 0.3);
+    text-align: center;
+}
+
+#merchHighlight:hover, #eventHighlight:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(46, 46, 46, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+  
+.highlightImg {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin-bottom: 1rem;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.mapContainer {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 80px 60px;
+    gap: 60px;
+    background-color: rgb(234, 227, 220);
+    font-family: 'Noto Serif', Georgia, serif;
+    font-size: 1.4em;
+    line-height: 1.6;
+    color: rgb(46, 46, 46);
+    margin: 0 auto;
+}
+
+.map {
+    -webkit-flex: 1 1 45%;
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 650px;
+}
+
+.mapContainer p {
+    padding: 0;
+    margin: 0;
+}
+
+.mTextContainer {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: flex-start;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 20px;
+}
+
+.mapContainer h2 {
+    font-size: 2.2rem;
+    font-family: 'Baron Neue', Impact, sans-serif;
+    padding-bottom: 20px;
+}
+
+#mapFrame {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4/3;
+}
+
+.textArea {
+    -webkit-flex: 1 1 45%;
+    flex: 1 1 45%;
+    min-width: 300px;
+    max-width: 400px;
+}
+
+/* ANIMATIONS */
+@keyframes pop {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+  
+.popWord {
+    display: inline-block;
+    opacity: 0;
+    animation: pop 0.1s ease-out forwards;
+}
+  
+.popWord:nth-child(1) {
+    animation-delay: 0.2s;
+}
+  
+.popWord:nth-child(2) {
+    animation-delay: 0.9s;
+}
+  
+.popWord:nth-child(3) {
+    animation-delay: 1.6s;
+}
+
+
+/* 
+===========================
+MOBILE STYLES
+===========================
+*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    .heroImage {
+        background-image: url("Images/heroMobile.png");
+        height: 90vh;
+    }
+
+    .heroText {
+        font-size: 2.3vh;
+    }
+
+    .heroText span {
+        padding: 3px 0px;
+    }
+    
+    .popWord {
+        display: block;
+    }
+
+    .heroText p {
+        font-size: 20px;
+    }
+
+    #communityButton {
+        font-size: 14px;
+    }
+
+    .intro {
+        -webkit-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        padding: 10px;
+        gap: 30px;
+    }
+
+    .intro img {
+        display: none;
+    }
+
+    .introText h2 {
+        padding: 0 0 10px 0;
+        margin: 20px 0;
+        font-size: 25px;
+    }
+
+    .introText p {
+        font-size: 16px;
+        margin: 0 0 10px 0;
+        padding: 0;
+    }
+
+    .highlights {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        gap: 0;
+        background: rgb(234, 227, 220);
+    }
+
+    .highlightBox {
+        width: 80%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    .highlightBox h2 {
+        font-size: 25px;
+    }
+
+    .highlightBox p {
+        font-size: 16px;
+    }
+
+    .testimonialText {
+        padding: 10px;
+    }
+
+    .testimonialText blockquote {
+        font-size: 20px;
+    }
+
+    .testimonialText blockquote::before, .testimonialText blockquote::after {
+        font-size: 30px;
+    }
+
+    #stars {
+        font-size: 30px;
+    }
+
+    .mapContainer {
+        -webkit-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        padding: 30px 20px;
+        gap: 40px;
+        align-items: center;
+    }
+
+    .mapContainer h2 {
+        font-size: 25px;
+    }
+
+    .map {
+        padding: 0;
+    }
+
+    .days {
+        padding: 0;
+    }
+
+    #mapFrame {
+        width: 100%;
+        height: 300px;
+    }
+
+    .mapText {
+        font-size: 16px;
+        padding-bottom: 15px;
+    }
+
+    .mTextContainer {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        font-size: 16px;
+        gap: 30px;
+    }
+}
+
+
+/* 
+===========================
+TABLET STYLES
+===========================
+*/
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    .heroImage {
+        background-image: url("Images/heroMobile.png");
+        height: 85vh;
+        background-size: cover;
+    }
+
+    .heroText {
+        font-size: 25px;
+    }
+
+    .heroText p {
+        font-size: 20px;
+    }
+
+    .intro {
+        -webkit-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        padding: 10px;
+        gap: 30px;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .intro img {
+        display: none;
+    }
+
+    .introText h2 {
+        padding: 0 0 20px 0;
+        margin: 20px 0;
+        font-size: 40px;
+    }
+
+    .introText p {
+        font-size: 22px;
+        margin: 0 0 10px 0;
+        padding: 0;
+    }
+
+    .highlights {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        gap: 10px;
+        background: rgb(234, 227, 220);
+    }
+
+    .highlightBox {
+        width: 80%;
+        margin: 20px auto;
+        padding: 15px;
+        max-width: none;
+    }
+
+    .highlightBox h2 {
+        font-size: 40px;
+    }
+
+    .highlightImg {
+        max-width: 550px;
+    }
+
+    .highlightBox p {
+        font-size: 22px;
+    }
+
+    .testimonialText {
+        padding: 10px;
+    }
+
+    .testimonialText blockquote {
+        font-size: 26px;
+    }
+
+    .testimonialText blockquote::before, .testimonialText blockquote::after {
+        font-size: 30px;
+    }
+
+    #stars {
+        font-size: 40px;
+    }
+
+    .mapContainer {
+        -webkit-flex-direction: column-reverse;
+        flex-direction: column-reverse;
+        padding: 30px 20px;
+        gap: 40px;
+        align-items: center;
+        padding-top: 60px;
+    }
+
+    .mapContainer h2 {
+        font-size: 40px;
+    }
+
+    .map {
+        padding: 0;
+    }
+
+    .days {
+        padding: 0;
+    }
+
+    #mapFrame {
+        width: 100%;
+        height: 300px;
+    }
+
+    .textArea p {
+        font-size: 22px;
+        padding-bottom: 15px;
+        line-height: 1;
+    }
+
+    .mTextContainer {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        align-items: center;
+        -webkit-flex-wrap: wrap;
+        flex-wrap: wrap;
+        font-size: 16px;
+        gap: 20px;
+    }
+
+}

@@ -1,0 +1,365 @@
+@charset "utf-8";
+
+/*  COMP 2681
+    Final Project: Coffee Run Co. Website
+    Sophia DiPietro (T00714296)
+    2025-05-14
+
+    Filename: join.css
+
+    This file contains styles for the join page for desktop, tablet, and mobile devices
+*/
+
+@font-face {
+    font-family: 'Baron Neue'; src: url('Fonts/BaronNeue.otf') format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Serif'; src: url('Fonts/NotoSerif.ttf') format('truetype');
+}
+
+#joinIntro {
+    max-width: 1050px;
+    margin: 60px auto 20px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#joinIntro h2 {
+    font-size: 2.5rem;
+    font-family: 'Baron Neue', Impact, sans-serif;
+    margin-bottom: 30px;
+}
+
+#joinIntro p {
+    font-size: 1.5rem;
+    font-family: 'Noto Serif', Georgia, serif;
+    line-height: 1.6;
+}
+
+body {
+    background: rgb(234, 227, 220);
+    font-family: 'Noto Serif', Georgia, serif;
+    color: rgb(46, 46, 46);
+}
+
+#formDiv {
+    max-width: 900px;
+    margin: 80px auto;
+    background: rgb(215, 205, 193);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(46, 46, 46, 0.3);
+}
+
+form {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    flex-direction: column;
+}
+
+.formRow {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+#userEmail, #bottomRow {
+    margin-bottom: 30px;
+}
+
+.formRow label {
+    -webkit-flex: 1 1 100%;
+    flex: 1 1 100%;
+    margin-bottom: 0;
+    font-size: 1.4rem;
+    font-family: 'Baron Neue', Impact, sans-serif;
+}
+
+.formRow input[type="text"], #commBox, #suggestions, #favFeature {
+    -webkit-flex: 1 1 45%;
+    flex: 1 1 45%;
+    padding: 10px;
+    margin: 0 0 20px 0;
+    font-size: 1.2rem;
+    border: 1px solid rgb(179, 169, 157);
+    border-radius: 8px;
+    font-family: 'Noto Serif', Georgia, serif;
+}
+
+.eventCheckboxes {
+    border: none;
+    margin: 30px 0 60px 0;
+    padding: 0;
+}
+  
+.eventCheckboxes legend {
+    font-family: 'Baron Neue', Impact, sans-serif;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
+}
+  
+.checkboxGrid {
+    display: grid;
+    grid-template-columns: repeat(2, max-content);
+    column-gap: 80px;  
+    row-gap: 15px;
+}
+  
+.checkboxGrid label {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+
+.additionalInfo textarea {
+    width: 98%;
+    font-size: 1rem;
+    border: 1px solid rgb(179, 169, 157);
+    border-radius: 10px;
+    resize: vertical;
+    min-height: 100px;
+}
+
+.additionalInfo label {
+    font-size: 1.4rem;
+    font-family: 'Baron Neue', Impact, sans-serif;
+    display: block;
+    margin-bottom: 15px;
+}
+
+#consent {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+}
+
+#consent i {
+    color: rgb(252, 78, 3);
+    font-size: 1.5rem;
+}
+
+#subButton {
+    text-align: center;
+}
+
+input[type="submit"], input[type="submit"]:focus,
+input[type="submit"]:active {
+    font-family: 'Baron Neue', Impact, sans-serif;
+    font-size: 1.2rem;
+    padding: 15px 30px;
+    background: rgb(46, 46, 46);
+    color: rgb(234, 227, 220);
+    border: 2px solid rgb(252, 78, 3);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+input[type="submit"]:hover {
+    background: rgb(252, 78, 3);
+    color: white;
+}
+
+input:active, input:focus, #commBox:focus, #suggestions:focus, #favFeature:focus {
+    outline: none;
+    font-family: 'Noto Serif', Georgia, serif;
+    color: rgb(46, 46, 46);
+    font-size: 1.2rem;
+    padding-left: 10px;
+    box-shadow: 0 6px 16px rgba(46, 46, 46, 0.3);
+}
+
+/* CHECKBOX STYLES */
+input[type="checkbox"] {
+    height: 25px;
+    width: 25px;
+    border: 2px solid rgba(46, 46, 46, 0.7);
+    border-radius: 5px;
+    background: white;
+    cursor: pointer;
+    appearance: none;
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+
+input[type="checkbox"]:checked {
+    background: rgba(46, 46, 46, 0.8);
+    border: 1px solid rgb(252, 78, 3);
+    padding-left: 0px;
+}
+
+input[type="checkbox"]:checked::after {
+    content: "✔";
+    font-size: 15px;
+    align-items: center;
+    justify-content: center;
+    display: -webkit-flex;
+    display: flex;
+    color: rgb(234, 227, 220);
+}
+
+/* INPUT VALIDATION STYLES */
+
+/* Places an x at the right side of the input box to notify the user that the input is invalid. */
+input#userEmail:focus:invalid, input#firstName:focus:invalid, 
+input#lastName:focus:invalid {
+    	background: url('images/invalid.png') no-repeat right, 
+		white;
+    	background-size: contain;
+}
+
+/* Places a checkmark at the right side of the input box to notify the user that the input is valid. */
+input#userEmail:focus:valid, input#firstName:focus:valid, 
+input#lastName:focus:valid {
+    	background: url('images/valid.png') no-repeat right, 
+                white;
+    	background-size: contain;
+}
+
+/* ANIMATIONS */
+#rotate {
+    display: inline-block;
+    animation: rotate 4s linear infinite;
+    transform-origin: center;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+/* 
+===========================
+MOBILE STYLES
+===========================
+*/
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+    #joinIntro {
+        padding: 0 15px;
+    }
+
+    #joinIntro h2 {
+        font-size: 30px;
+    }
+
+    #joinIntro p {
+        font-size: 16px;
+    }
+
+    #formDiv {
+        margin: 40px 15px;
+        padding: 20px;
+    }
+
+    .formRow {
+        -webkit-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .formRow label {
+        font-size: 22px;
+    }
+
+    .formRow input[type="text"], #commBox, #suggestions, #favFeature {
+        font-size: 16px;
+    }
+
+    .checkboxGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .additionalInfo textarea {
+        max-width: 92%;
+    }
+
+    #consent {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    #subButton {
+        font-size: 22px;
+    }
+    
+}
+
+
+/* 
+===========================
+TABLET STYLES
+===========================
+*/
+@media only screen and (min-width: 481px) and (max-width: 1024px) {
+    #joinIntro {
+        padding: 0 30px;
+    }
+    
+    #joinIntro h2 {
+        font-size: 2.2rem;
+    }
+    
+    #joinIntro p {
+        font-size: 1.3rem;
+    }
+    
+    #formDiv {
+        margin: 60px 30px;
+        padding: 30px;
+    }
+    
+    .formRow {
+        -webkit-flex-direction: row;
+        flex-direction: row;
+        gap: 20px;
+    }
+    
+    .formRow input[type="text"], #commBox, #suggestions, #favFeature {
+        -webkit-flex: 1 1 48%;
+        flex: 1 1 48%;
+        width: 100%;
+    }
+    
+    .formRow label {
+        font-size: 1.3rem;
+    }
+    
+    .eventCheckboxes legend {
+        font-size: 1.3rem;
+    }
+    
+    .checkboxGrid label {
+        font-size: 1.1rem;
+    }
+    
+    .additionalInfo textarea {
+        font-size: 1rem;
+        max-width: 97%;
+    }
+    
+    #consent {
+        font-size: 1.1rem;
+    }
+
+    
+    #subButton input[type="submit"] {
+        font-size: 1.1rem;
+        padding: 14px 28px;
+    }
+    
+}
